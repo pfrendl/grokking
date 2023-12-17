@@ -1,6 +1,5 @@
 import inspect
 import math
-import time
 from itertools import product
 from pathlib import Path
 from typing import Callable
@@ -161,7 +160,6 @@ def main() -> None:
             )
             avg_train_losses = []
             avg_test_losses = []
-            start = time.perf_counter()
             for epoch in range(num_epochs):
                 train_epoch_pbar = manager.counter(
                     total=len(train_loader),
